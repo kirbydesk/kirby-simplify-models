@@ -1,0 +1,32 @@
+{
+  "provider": {
+    "id": "deepl",
+    "name": "DeepL",
+    "website": "https://www.deepl.com",
+    "description": "Specialized translation service with high quality"
+  },
+  "models": {
+    "deepl-pro": {
+      "name": "DeepL Pro",
+      "community_status": "recommended",
+      "quality": {
+        "translation": 98,
+        "context": 85,
+        "speed": 92,
+        "cost": 88
+      },
+      "description": "Professional DeepL translation with API access"
+    },
+    "deepl-free": {
+      "name": "DeepL Free",
+      "community_status": "suitable",
+      "quality": {
+        "translation": 98,
+        "context": 85,
+        "speed": 88,
+        "cost": 100
+      },
+      "description": "Free DeepL API with usage limits"
+    }
+  }
+}

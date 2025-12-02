@@ -1,0 +1,54 @@
+{
+  "provider": {
+    "id": "mistral",
+    "name": "Mistral AI",
+    "website": "https://mistral.ai",
+    "description": "European AI company with open and commercial models"
+  },
+  "models": {
+    "mistral-large-latest": {
+      "name": "Mistral Large",
+      "community_status": "recommended",
+      "quality": {
+        "translation": 90,
+        "context": 92,
+        "speed": 85,
+        "cost": 75
+      },
+      "description": "Most capable Mistral model for complex tasks"
+    },
+    "mistral-medium-latest": {
+      "name": "Mistral Medium",
+      "community_status": "suitable",
+      "quality": {
+        "translation": 85,
+        "context": 85,
+        "speed": 90,
+        "cost": 82
+      },
+      "description": "Balanced Mistral model"
+    },
+    "mistral-small-latest": {
+      "name": "Mistral Small",
+      "community_status": "suitable",
+      "quality": {
+        "translation": 80,
+        "context": 78,
+        "speed": 95,
+        "cost": 90
+      },
+      "description": "Fast and cost-effective Mistral model"
+    },
+    "open-mistral-7b": {
+      "name": "Open Mistral 7B",
+      "community_status": "issues",
+      "quality": {
+        "translation": 72,
+        "context": 70,
+        "speed": 98,
+        "cost": 95
+      },
+      "description": "Open source Mistral model, lower quality for translations"
+    }
+  }
+}
