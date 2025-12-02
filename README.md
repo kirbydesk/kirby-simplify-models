@@ -97,41 +97,6 @@ To add a new provider:
    - Create new provider class in plugin (e.g., `MyProvider.php`)
    - Update `TranslationService.php` to instantiate the new class
 
-## Adding New Models
-
-When adding a new model to an existing provider:
-
-1. Use these default values for untested models:
-   ```json
-   {
-     "status": "unknown",
-     "quality": 0,
-     "recommended": false,
-     "supports": ["temperature"]
-   }
-   ```
-
-2. After testing, update based on real-world translation results
-
-3. Document any issues in the commit message
-
-## Contributing
-
-Contributions are welcome! Please submit pull requests with:
-- New models as they become available
-- Updated quality ratings based on real-world translation experience
-- Status updates (unknown → working/issues)
-- Recommendation updates based on thorough testing
-- Corrections to provider information
-
-### Guidelines
-- **New models**: Always start with `quality: 0`, `status: "unknown"`, `recommended: false`
-- **Quality ratings**: Test with real translations before rating (3+ different text types)
-- **Status working**: Only after confirming model works reliably
-- **Status issues**: Document specific problems in commit message or GitHub issue
-- **Recommended**: Only set to `true` for models that have been thoroughly tested
-- **Ensure provider `id`** matches the plugin's expected provider type
-
 ## Usage
 
 This repository is automatically fetched by Kirby Simplify plugin via GitHub's raw content URL:
@@ -140,6 +105,14 @@ https://raw.githubusercontent.com/kirbydesk/kirby-simplify-models/main/{provider
 ```
 
 The data is cached for 24 hours in the plugin to reduce API calls.
+
+## Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines on:
+- Adding new models
+- Updating quality ratings
+- Reporting issues
+- Testing guidelines
 
 ## License
 
