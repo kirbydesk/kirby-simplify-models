@@ -101,8 +101,8 @@ Before updating ratings, test models with:
 3. **Make your changes** to the JSON files
 4. **Test** that the JSON is valid (use a JSON validator)
 5. **Commit** with a clear message:
-   - ✅ Good: "Add GPT-5 model with initial testing results (quality: 4)"
-   - ❌ Bad: "Update openai.json"
+   - Good: "Add GPT-5 model with initial testing results (quality: 4)"
+   - Bad: "Update openai.json"
 6. **Push** to your fork
 7. **Create a Pull Request** with:
    - Clear description of what you changed
@@ -123,4 +123,4 @@ If you have questions about contributing:
 - Check the main [README.md](README.md) for technical details
 - Review existing pull requests for examples
 
-Thank you for helping improve the Kirby Simplify Models database! 🎉
+Thank you for helping improve the Kirby Simplify Models database!
