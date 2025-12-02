@@ -6,23 +6,27 @@
   },
   "models": {
     "mistral-large-latest": {
-      "status": "working",
-      "quality": 4,
+      "status": "unknown",
+      "quality": 0,
+      "recommended": false,
       "supports": ["temperature"]
     },
     "mistral-medium-latest": {
-      "status": "working",
-      "quality": 4,
+      "status": "unknown",
+      "quality": 0,
+      "recommended": false,
       "supports": ["temperature"]
     },
     "mistral-small-latest": {
-      "status": "working",
-      "quality": 3,
+      "status": "unknown",
+      "quality": 0,
+      "recommended": false,
       "supports": ["temperature"]
     },
     "open-mistral-7b": {
-      "status": "issues",
-      "quality": 2,
+      "status": "unknown",
+      "quality": 0,
+      "recommended": false,
       "supports": ["temperature"]
     }
   }

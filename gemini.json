@@ -6,23 +6,27 @@
   },
   "models": {
     "gemini-2.0-flash-exp": {
-      "status": "working",
-      "quality": 4,
+      "status": "unknown",
+      "quality": 0,
+      "recommended": false,
       "supports": ["temperature"]
     },
     "gemini-1.5-pro": {
-      "status": "working",
-      "quality": 4,
+      "status": "unknown",
+      "quality": 0,
+      "recommended": false,
       "supports": ["temperature"]
     },
     "gemini-1.5-flash": {
-      "status": "working",
-      "quality": 4,
+      "status": "unknown",
+      "quality": 0,
+      "recommended": false,
       "supports": ["temperature"]
     },
     "gemini-1.0-pro": {
-      "status": "issues",
-      "quality": 3,
+      "status": "unknown",
+      "quality": 0,
+      "recommended": false,
       "supports": ["temperature"]
     }
   }

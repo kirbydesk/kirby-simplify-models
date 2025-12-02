@@ -6,23 +6,27 @@
   },
   "models": {
     "gpt-4o": {
-      "status": "working",
-      "quality": 5,
+      "status": "unknown",
+      "quality": 0,
+      "recommended": false,
       "supports": ["temperature"]
     },
     "gpt-4o-mini": {
-      "status": "working",
-      "quality": 4,
+      "status": "unknown",
+      "quality": 0,
+      "recommended": false,
       "supports": ["temperature"]
     },
     "gpt-4-turbo": {
-      "status": "working",
-      "quality": 4,
+      "status": "unknown",
+      "quality": 0,
+      "recommended": false,
       "supports": ["temperature"]
     },
     "gpt-3.5-turbo": {
-      "status": "issues",
-      "quality": 3,
+      "status": "unknown",
+      "quality": 0,
+      "recommended": false,
       "supports": ["temperature"]
     }
   }
