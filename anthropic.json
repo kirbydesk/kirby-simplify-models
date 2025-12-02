@@ -2,64 +2,33 @@
   "provider": {
     "id": "anthropic",
     "name": "Anthropic",
-    "website": "https://anthropic.com",
-    "description": "AI safety company behind Claude models"
+    "website": "https://anthropic.com"
   },
   "models": {
     "claude-3-5-sonnet-20241022": {
-      "name": "Claude 3.5 Sonnet",
-      "community_status": "recommended",
-      "quality": {
-        "translation": 96,
-        "context": 98,
-        "speed": 88,
-        "cost": 75
-      },
-      "description": "Latest Claude model with excellent translation capabilities"
+      "status": "working",
+      "quality": 5,
+      "supports": ["temperature"]
     },
     "claude-3-5-haiku-20241022": {
-      "name": "Claude 3.5 Haiku",
-      "community_status": "recommended",
-      "quality": {
-        "translation": 90,
-        "context": 88,
-        "speed": 96,
-        "cost": 92
-      },
-      "description": "Fast and efficient Claude model for translations"
+      "status": "working",
+      "quality": 4,
+      "supports": ["temperature"]
     },
     "claude-3-opus-20240229": {
-      "name": "Claude 3 Opus",
-      "community_status": "suitable",
-      "quality": {
-        "translation": 94,
-        "context": 96,
-        "speed": 75,
-        "cost": 65
-      },
-      "description": "Most capable Claude 3 model, slower but very accurate"
+      "status": "working",
+      "quality": 5,
+      "supports": ["temperature"]
     },
     "claude-3-sonnet-20240229": {
-      "name": "Claude 3 Sonnet",
-      "community_status": "suitable",
-      "quality": {
-        "translation": 88,
-        "context": 90,
-        "speed": 85,
-        "cost": 80
-      },
-      "description": "Balanced Claude 3 model"
+      "status": "working",
+      "quality": 4,
+      "supports": ["temperature"]
     },
     "claude-3-haiku-20240307": {
-      "name": "Claude 3 Haiku",
-      "community_status": "suitable",
-      "quality": {
-        "translation": 82,
-        "context": 80,
-        "speed": 95,
-        "cost": 90
-      },
-      "description": "Fastest Claude 3 model"
+      "status": "working",
+      "quality": 3,
+      "supports": ["temperature"]
     }
   }
 }

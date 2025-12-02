@@ -2,53 +2,28 @@
   "provider": {
     "id": "google",
     "name": "Google",
-    "website": "https://ai.google.dev",
-    "description": "Google's generative AI models"
+    "website": "https://ai.google.dev"
   },
   "models": {
     "gemini-2.0-flash-exp": {
-      "name": "Gemini 2.0 Flash (Experimental)",
-      "community_status": "suitable",
-      "quality": {
-        "translation": 90,
-        "context": 92,
-        "speed": 95,
-        "cost": 88
-      },
-      "description": "Experimental next-generation Gemini Flash model"
+      "status": "working",
+      "quality": 4,
+      "supports": ["temperature"]
     },
     "gemini-1.5-pro": {
-      "name": "Gemini 1.5 Pro",
-      "community_status": "recommended",
-      "quality": {
-        "translation": 92,
-        "context": 95,
-        "speed": 82,
-        "cost": 78
-      },
-      "description": "Advanced Gemini model with large context window"
+      "status": "working",
+      "quality": 4,
+      "supports": ["temperature"]
     },
     "gemini-1.5-flash": {
-      "name": "Gemini 1.5 Flash",
-      "community_status": "recommended",
-      "quality": {
-        "translation": 88,
-        "context": 88,
-        "speed": 94,
-        "cost": 90
-      },
-      "description": "Fast and efficient Gemini model"
+      "status": "working",
+      "quality": 4,
+      "supports": ["temperature"]
     },
     "gemini-1.0-pro": {
-      "name": "Gemini 1.0 Pro",
-      "community_status": "issues",
-      "quality": {
-        "translation": 78,
-        "context": 80,
-        "speed": 85,
-        "cost": 85
-      },
-      "description": "First generation Gemini Pro model"
+      "status": "issues",
+      "quality": 3,
+      "supports": ["temperature"]
     }
   }
 }
