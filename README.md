@@ -37,7 +37,7 @@ Each provider has its own JSON file in the repository root:
   "models": {
     "model-id": {
       "status": "working|issues|unknown",
-      "quality": 0,
+      "quality": 0|1|2|3|4|5,
       "recommended": true|false,
       "supports": ["temperature"]
     }
@@ -59,16 +59,12 @@ Each provider has its own JSON file in the repository root:
 ### Model
 
 #### `status` (string)
-**Possible values:** `"working"` | `"issues"` | `"unknown"`
-
 Technical reliability status of the model:
 - `"working"` - Model works reliably without known technical issues
 - `"issues"` - Model has known technical problems or limitations
 - `"unknown"` - Model has not been tested yet (default for new models)
 
 #### `quality` (number)
-**Possible values:** `0` | `1` | `2` | `3` | `4` | `5`
-
 Translation quality rating based on real-world testing:
 - `0` - Not yet evaluated (default for new models)
 - `1` - Low quality - frequent errors, poor context understanding
@@ -78,8 +74,6 @@ Translation quality rating based on real-world testing:
 - `5` - Excellent quality - highly accurate and context-aware
 
 #### `recommended` (boolean)
-**Possible values:** `true` | `false`
-
 Whether this model is recommended for production use:
 - `true` - Recommended by the community (shown with "Empfohlen" badge in UI)
 - `false` - Not specifically recommended (default for new models)
@@ -87,8 +81,6 @@ Whether this model is recommended for production use:
 **Note:** A model can be `recommended: true` only if it has been thoroughly tested with `status: "working"` and `quality >= 4`.
 
 #### `supports` (array)
-**Possible values:** `["temperature"]` | `[]`
-
 Array of supported features:
 - `"temperature"` - Model supports temperature parameter for creativity control
 - Can be empty array `[]` if no special features supported
