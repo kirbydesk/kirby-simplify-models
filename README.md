@@ -78,8 +78,6 @@ Whether this model is recommended for production use:
 - `true` - Recommended by the community (shown with "Empfohlen" badge in UI)
 - `false` - Not specifically recommended (default for new models)
 
-**Note:** A model can be `recommended: true` only if it has been thoroughly tested with `status: "working"` and `quality >= 4`.
-
 #### `supports` (array)
 Array of supported features:
 - `"temperature"` - Model supports temperature parameter for creativity control
@@ -131,7 +129,7 @@ Contributions are welcome! Please submit pull requests with:
 - **Quality ratings**: Test with real translations before rating (3+ different text types)
 - **Status working**: Only after confirming model works reliably
 - **Status issues**: Document specific problems in commit message or GitHub issue
-- **Recommended**: Only set to `true` for models with `quality >= 4` and proven reliability
+- **Recommended**: Only set to `true` for models that have been thoroughly tested
 - **Ensure provider `id`** matches the plugin's expected provider type
 
 ## Usage
