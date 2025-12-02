@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/kirbydesk/kirby-simplify-models/main/schema.json",
+  "title": "Kirby Simplify Model Provider Schema",
+  "description": "Schema for AI model provider data used by Kirby Simplify plugin",
+  "type": "object",
+  "required": ["provider", "models"],
+  "properties": {
+    "provider": {
+      "type": "object",
+      "required": ["id", "name", "website"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Provider identifier matching plugin provider type",
+          "enum": ["openai", "anthropic", "gemini", "mistral"],
+          "examples": ["openai", "anthropic"]
+        },
+        "name": {
+          "type": "string",
+          "description": "Human-readable provider name",
+          "minLength": 1,
+          "examples": ["OpenAI", "Anthropic", "Google Gemini"]
+        },
+        "website": {
+          "type": "string",
+          "description": "Provider's website URL",
+          "format": "uri",
+          "pattern": "^https?://",
+          "examples": ["https://openai.com", "https://anthropic.com"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "models": {
+      "type": "object",
+      "description": "Collection of models offered by this provider",
+      "minProperties": 1,
+      "patternProperties": {
+        "^[a-zA-Z0-9._-]+$": {
+          "type": "object",
+          "required": ["status", "quality", "recommended", "supports"],
+          "properties": {
+            "status": {
+              "type": "string",
+              "description": "Technical reliability status of the model",
+              "enum": ["working", "issues", "unknown"],
+              "examples": ["working", "unknown"]
+            },
+            "quality": {
+              "type": "integer",
+              "description": "Translation quality rating (0=untested, 1-5=rated)",
+              "minimum": 0,
+              "maximum": 5,
+              "examples": [0, 4, 5]
+            },
+            "recommended": {
+              "type": "boolean",
+              "description": "Whether this model is recommended for production use",
+              "examples": [true, false]
+            },
+            "supports": {
+              "type": "array",
+              "description": "Array of supported features",
+              "items": {
+                "type": "string",
+                "enum": ["temperature"]
+              },
+              "uniqueItems": true,
+              "examples": [["temperature"], []]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

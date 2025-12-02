@@ -1,0 +1,34 @@
+name: Validate JSON Files
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    
+    - name: Install AJV JSON Schema Validator
+      run: npm install -g ajv-cli ajv-formats
+    
+    - name: Validate openai.json
+      run: ajv validate -s schema.json -d openai.json --strict=false
+    
+    - name: Validate anthropic.json
+      run: ajv validate -s schema.json -d anthropic.json --strict=false
+    
+    - name: Validate gemini.json
+      run: ajv validate -s schema.json -d gemini.json --strict=false
+    
+    - name: Validate mistral.json
+      run: ajv validate -s schema.json -d mistral.json --strict=false
