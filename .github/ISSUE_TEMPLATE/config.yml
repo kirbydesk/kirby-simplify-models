@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Plugin Issues
+    url: https://github.com/chrfickinger/kirby-simplify/issues
+    about: For issues with the Kirby Simplify plugin itself, please use the main plugin repository
+  - name: Discussion
+    url: https://github.com/kirbydesk/kirby-simplify-models/discussions
+    about: For questions, ideas, or general discussion about model ratings
