@@ -27,7 +27,7 @@ Each provider has its own JSON file in the repository root:
 
 ## File Format
 
-\`\`\`json
+```json
 {
   "provider": {
     "id": "provider-id",
@@ -42,32 +42,32 @@ Each provider has its own JSON file in the repository root:
     }
   }
 }
-\`\`\`
+```
 
 ## Fields
 
 ### Provider
-- \`id\`: Provider identifier (must match plugin provider type)
-  - \`openai\` - OpenAI models
-  - \`anthropic\` - Anthropic Claude models
-  - \`gemini\` - Google Gemini models (not "google")
-  - \`mistral\` - Mistral AI models
-- \`name\`: Human-readable provider name
-- \`website\`: Provider's website URL
+- `id`: Provider identifier (must match plugin provider type)
+  - `openai` - OpenAI models
+  - `anthropic` - Anthropic Claude models
+  - `gemini` - Google Gemini models (not "google")
+  - `mistral` - Mistral AI models
+- `name`: Human-readable provider name
+- `website`: Provider's website URL
 
 ### Model
-- \`status\`: Model status
-  - \`working\` - Model works reliably
-  - \`issues\` - Known problems or limitations
-- \`quality\`: Translation quality rating (1-5 scale)
-  - \`5\` - Excellent quality
-  - \`4\` - Very good quality
-  - \`3\` - Acceptable quality
-  - \`2\` - Limited quality
-  - \`1\` - Low quality
-- \`supports\`: Array of supported features
-  - \`temperature\` - Supports temperature parameter for creativity control
-  - Can be empty array \`[]\` if no special features
+- `status`: Model status
+  - `working` - Model works reliably
+  - `issues` - Known problems or limitations
+- `quality`: Translation quality rating (1-5 scale)
+  - `5` - Excellent quality
+  - `4` - Very good quality
+  - `3` - Acceptable quality
+  - `2` - Limited quality
+  - `1` - Low quality
+- `supports`: Array of supported features
+  - `temperature` - Supports temperature parameter for creativity control
+  - Can be empty array `[]` if no special features
 
 ## Adding New Providers
 
@@ -76,12 +76,12 @@ To add a new provider:
 1. **OpenAI-compatible APIs** (like Mistral):
    - Add JSON file with provider info
    - No plugin code changes needed
-   - Will automatically use \`OpenAI.php\` implementation
+   - Will automatically use `OpenAI.php` implementation
 
 2. **Custom APIs** (different format):
    - Add JSON file with provider info
-   - Create new provider class in plugin (e.g., \`MyProvider.php\`)
-   - Update \`TranslationService.php\` to instantiate the new class
+   - Create new provider class in plugin (e.g., `MyProvider.php`)
+   - Update `TranslationService.php` to instantiate the new class
 
 ## Contributing
 
@@ -95,14 +95,14 @@ Contributions are welcome! Please submit pull requests with:
 - Quality ratings should reflect translation accuracy and consistency
 - Status should only be marked as "issues" if there are reproducible problems
 - Test models with actual translation tasks before rating
-- Ensure provider \`id\` matches the plugin's expected provider type
+- Ensure provider `id` matches the plugin's expected provider type
 
 ## Usage
 
 This repository is automatically fetched by Kirby Simplify plugin via GitHub's raw content URL:
-\`\`\`
+```
 https://raw.githubusercontent.com/kirbydesk/kirby-simplify-models/main/{provider}.json
-\`\`\`
+```
 
 The data is cached for 24 hours in the plugin to reduce API calls.
 
