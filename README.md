@@ -36,8 +36,8 @@ Each provider has its own JSON file in the repository root:
   },
   "models": {
     "model-id": {
-      "status": "working|issues",
-      "quality": 5,
+      "status": "working|issues|unknown",
+      "quality": 0,
       "supports": ["temperature"]
     }
   }
@@ -56,18 +56,26 @@ Each provider has its own JSON file in the repository root:
 - `website`: Provider's website URL
 
 ### Model
-- `status`: Model status
-  - `working` - Model works reliably
-  - `issues` - Known problems or limitations
-- `quality`: Translation quality rating (1-5 scale)
-  - `5` - Excellent quality
-  - `4` - Very good quality
-  - `3` - Acceptable quality
-  - `2` - Limited quality
-  - `1` - Low quality
-- `supports`: Array of supported features
-  - `temperature` - Supports temperature parameter for creativity control
-  - Can be empty array `[]` if no special features
+
+#### `status` (string)
+Technical reliability status of the model:
+- `"working"` - Model works reliably without known technical issues
+- `"issues"` - Model has known technical problems or limitations
+- `"unknown"` - Model has not been tested yet (default for new models)
+
+#### `quality` (number 0-5)
+Translation quality rating based on real-world testing:
+- `0` - Not yet evaluated (default for new models)
+- `1` - Low quality - frequent errors, poor context understanding
+- `2` - Limited quality - usable but requires review
+- `3` - Acceptable quality - good for basic translations
+- `4` - Very good quality - reliable for most use cases
+- `5` - Excellent quality - highly accurate and context-aware
+
+#### `supports` (array)
+Array of supported features:
+- `"temperature"` - Model supports temperature parameter for creativity control
+- Can be empty array `[]` if no special features supported
 
 ## Adding New Providers
 
@@ -83,19 +91,37 @@ To add a new provider:
    - Create new provider class in plugin (e.g., `MyProvider.php`)
    - Update `TranslationService.php` to instantiate the new class
 
+## Adding New Models
+
+When adding a new model to an existing provider:
+
+1. Use these default values for untested models:
+   ```json
+   {
+     "status": "unknown",
+     "quality": 0,
+     "supports": ["temperature"]
+   }
+   ```
+
+2. After testing, update based on real-world translation results
+
+3. Document any issues in the commit message
+
 ## Contributing
 
 Contributions are welcome! Please submit pull requests with:
 - New models as they become available
 - Updated quality ratings based on real-world translation experience
-- Status updates (working ↔ issues)
+- Status updates (unknown → working/issues)
 - Corrections to provider information
 
 ### Guidelines
-- Quality ratings should reflect translation accuracy and consistency
-- Status should only be marked as "issues" if there are reproducible problems
-- Test models with actual translation tasks before rating
-- Ensure provider `id` matches the plugin's expected provider type
+- **New models**: Always start with `quality: 0` and `status: "unknown"`
+- **Quality ratings**: Test with real translations before rating (3+ different text types)
+- **Status working**: Only after confirming model works reliably
+- **Status issues**: Document specific problems in commit message or GitHub issue
+- **Ensure provider `id`** matches the plugin's expected provider type
 
 ## Usage
 
