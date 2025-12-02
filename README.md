@@ -38,6 +38,7 @@ Each provider has its own JSON file in the repository root:
     "model-id": {
       "status": "working|issues|unknown",
       "quality": 0,
+      "recommended": false,
       "supports": ["temperature"]
     }
   }
@@ -72,6 +73,13 @@ Translation quality rating based on real-world testing:
 - `4` - Very good quality - reliable for most use cases
 - `5` - Excellent quality - highly accurate and context-aware
 
+#### `recommended` (boolean)
+Whether this model is recommended for production use:
+- `true` - Recommended by the community (shown with "Empfohlen" badge in UI)
+- `false` - Not specifically recommended (default for new models)
+
+**Note:** A model can be `recommended: true` only if it has been thoroughly tested with `status: "working"` and `quality >= 4`.
+
 #### `supports` (array)
 Array of supported features:
 - `"temperature"` - Model supports temperature parameter for creativity control
@@ -100,6 +108,7 @@ When adding a new model to an existing provider:
    {
      "status": "unknown",
      "quality": 0,
+     "recommended": false,
      "supports": ["temperature"]
    }
    ```
@@ -114,13 +123,15 @@ Contributions are welcome! Please submit pull requests with:
 - New models as they become available
 - Updated quality ratings based on real-world translation experience
 - Status updates (unknown → working/issues)
+- Recommendation updates based on thorough testing
 - Corrections to provider information
 
 ### Guidelines
-- **New models**: Always start with `quality: 0` and `status: "unknown"`
+- **New models**: Always start with `quality: 0`, `status: "unknown"`, `recommended: false`
 - **Quality ratings**: Test with real translations before rating (3+ different text types)
 - **Status working**: Only after confirming model works reliably
 - **Status issues**: Document specific problems in commit message or GitHub issue
+- **Recommended**: Only set to `true` for models with `quality >= 4` and proven reliability
 - **Ensure provider `id`** matches the plugin's expected provider type
 
 ## Usage
