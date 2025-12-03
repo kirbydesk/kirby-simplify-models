@@ -5,26 +5,62 @@
     "website": "https://openai.com"
   },
   "models": {
-    "gpt-4o": {
+    "gpt-5.1": {
+      "status": "issues",
+      "quality": 0,
+      "recommended": false,
+      "supports": []
+    },
+		"gpt-5-mini": {
+      "status": "issues",
+      "quality": 0,
+      "recommended": false,
+      "supports": []
+    },
+		"gpt-5-nano": {
       "status": "unknown",
+      "quality": 0,
+      "recommended": false,
+      "supports": []
+    },
+		"gpt-4.1": {
+      "status": "unknown",
+      "quality": 0,
+      "recommended": false,
+      "supports": ["temperature"]
+    },
+		"gpt-4.1-mini": {
+      "status": "unknown",
+      "quality": 0,
+      "recommended": false,
+      "supports": ["temperature"]
+    },
+		"gpt-4.1-nano": {
+      "status": "issues",
+      "quality": 0,
+      "recommended": false,
+      "supports": ["temperature"]
+    },
+		"gpt-4o": {
+      "status": "issues",
       "quality": 0,
       "recommended": false,
       "supports": ["temperature"]
     },
     "gpt-4o-mini": {
-      "status": "unknown",
+      "status": "issues",
       "quality": 0,
       "recommended": false,
       "supports": ["temperature"]
     },
     "gpt-4-turbo": {
-      "status": "unknown",
+      "status": "issues",
       "quality": 0,
       "recommended": false,
       "supports": ["temperature"]
     },
     "gpt-3.5-turbo": {
-      "status": "unknown",
+      "status": "issues",
       "quality": 0,
       "recommended": false,
       "supports": ["temperature"]
