@@ -9,28 +9,28 @@
       "status": "unknown",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"],
+      "temperature": true,
       "output_token_limit": null
     },
     "mistral-medium-latest": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"],
+      "temperature": true,
       "output_token_limit": null
     },
     "mistral-small-latest": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"],
+      "temperature": true,
       "output_token_limit": null
     },
     "open-mistral-7b": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"],
+      "temperature": true,
       "output_token_limit": null
     }
   }

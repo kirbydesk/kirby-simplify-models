@@ -9,70 +9,70 @@
       "status": "issues",
       "quality": 0,
       "recommended": false,
-      "supports": [],
+      "temperature": false,
       "output_token_limit": null
     },
     "gpt-5-mini": {
       "status": "issues",
       "quality": 0,
       "recommended": false,
-      "supports": [],
+      "temperature": false,
       "output_token_limit": null
     },
     "gpt-5-nano": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
-      "supports": [],
+      "temperature": false,
       "output_token_limit": null
     },
     "gpt-4.1": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"],
+      "temperature": true,
       "output_token_limit": null
     },
     "gpt-4.1-mini": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"],
+      "temperature": true,
       "output_token_limit": null
     },
     "gpt-4.1-nano": {
       "status": "issues",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"],
+      "temperature": true,
       "output_token_limit": null
     },
     "gpt-4o": {
       "status": "issues",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"],
+      "temperature": true,
       "output_token_limit": null
     },
     "gpt-4o-mini": {
       "status": "issues",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"],
+      "temperature": true,
       "output_token_limit": null
     },
     "gpt-4-turbo": {
       "status": "issues",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"],
+      "temperature": true,
       "output_token_limit": null
     },
     "gpt-3.5-turbo": {
       "status": "issues",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"],
+      "temperature": true,
       "output_token_limit": null
     }
   }

@@ -16,8 +16,9 @@ assignees: ''
 
 ## Model Capabilities
 
-**Supports Temperature:** (yes/no)
-**Other Features:** (list any special features)
+**Supports Temperature:** (true/false)
+**Output Token Limit:** (e.g., 8192, 32000, 64000, or null for no limit)
+
 
 ## Initial Testing (optional)
 

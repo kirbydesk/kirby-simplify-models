@@ -9,28 +9,28 @@
       "status": "unknown",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"],
+      "temperature": true,
       "output_token_limit": null
     },
     "gemini-1.5-pro": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"],
+      "temperature": true,
       "output_token_limit": null
     },
     "gemini-1.5-flash": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"],
+      "temperature": true,
       "output_token_limit": null
     },
     "gemini-1.0-pro": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"],
+      "temperature": true,
       "output_token_limit": null
     }
   }

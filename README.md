@@ -39,7 +39,8 @@ Each provider has its own JSON file in the repository root:
       "status": "working|issues|unknown",
       "quality": 0|1|2|3|4|5,
       "recommended": true|false,
-      "supports": ["temperature"]
+      "temperature": true,
+      "output_token_limit": 8192|null
     }
   }
 }
@@ -78,11 +79,21 @@ Whether this model is recommended for production use:
 - `true` - Recommended by the community (shown with "Empfohlen" badge in UI)
 - `false` - Not specifically recommended (default for new models)
 
-#### `supports` (array)
-Array of supported features:
-- `"temperature"` - Model supports temperature parameter for creativity control
-- Can be empty array `[]` if no special features supported
+#### `temperature` (boolean)
+Whether the model supports the temperature parameter for creativity control:
+- `true` - Model accepts temperature parameter (typically 0.0-1.0)
+- `false` - Model does not support temperature parameter
 
+**Note:** The actual temperature value (e.g., 0.3, 0.4) is set in the variant configuration (e.g., `en.json`), not in the model config.
+
+#### `output_token_limit` (number|null)
+Maximum number of output tokens the model can generate:
+- `8192` - Claude 3.5 Haiku and similar models
+- `32000` - Claude Opus 4
+- `64000` - Claude Sonnet 4, Claude 3.7, Haiku 4.5
+- `null` - No specific limit or provider decides (OpenAI, Gemini, Mistral)
+
+**Important:** For Anthropic models, `output_token_limit` is **required**. If not set, the API call will fail.
 ## Adding New Providers
 
 To add a new provider:
