@@ -9,61 +9,71 @@
       "status": "issues",
       "quality": 0,
       "recommended": false,
-      "supports": []
+      "supports": [],
+      "output_token_limit": null
     },
-		"gpt-5-mini": {
+    "gpt-5-mini": {
       "status": "issues",
       "quality": 0,
       "recommended": false,
-      "supports": []
+      "supports": [],
+      "output_token_limit": null
     },
-		"gpt-5-nano": {
+    "gpt-5-nano": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
-      "supports": []
+      "supports": [],
+      "output_token_limit": null
     },
-		"gpt-4.1": {
+    "gpt-4.1": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"]
+      "supports": ["temperature"],
+      "output_token_limit": null
     },
-		"gpt-4.1-mini": {
+    "gpt-4.1-mini": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"]
+      "supports": ["temperature"],
+      "output_token_limit": null
     },
-		"gpt-4.1-nano": {
+    "gpt-4.1-nano": {
       "status": "issues",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"]
+      "supports": ["temperature"],
+      "output_token_limit": null
     },
-		"gpt-4o": {
+    "gpt-4o": {
       "status": "issues",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"]
+      "supports": ["temperature"],
+      "output_token_limit": null
     },
     "gpt-4o-mini": {
       "status": "issues",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"]
+      "supports": ["temperature"],
+      "output_token_limit": null
     },
     "gpt-4-turbo": {
       "status": "issues",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"]
+      "supports": ["temperature"],
+      "output_token_limit": null
     },
     "gpt-3.5-turbo": {
       "status": "issues",
       "quality": 0,
       "recommended": false,
-      "supports": ["temperature"]
+      "supports": ["temperature"],
+      "output_token_limit": null
     }
   }
 }

@@ -7,9 +7,10 @@
   "models": {
     "claude-3-5-haiku-20241022": {
       "status": "unknown",
-      "quality": 0,
-      "recommended": false,
-      "supports": ["temperature"]
+      "quality": 4,
+      "recommended": true,
+      "supports": ["temperature"],
+      "output_token_limit": 8192
     }
   }
 }
