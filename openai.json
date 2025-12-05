@@ -2,7 +2,7 @@
   "provider": {
     "id": "openai",
     "name": "OpenAI",
-    "url": "https://openai.com/api/pricing/"
+    "url": "https://platform.openai.com/docs/pricing"
   },
   "models": {
     "gpt-5.1": {
