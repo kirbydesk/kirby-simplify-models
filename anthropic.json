@@ -2,7 +2,7 @@
   "provider": {
     "id": "anthropic",
     "name": "Anthropic",
-    "url": "https://www.anthropic.com/pricing"
+    "url": "https://www.claude.com/pricing#api"
   },
   "models": {
     "claude-3-5-haiku-20241022": {

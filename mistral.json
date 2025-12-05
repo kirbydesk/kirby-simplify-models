@@ -2,40 +2,32 @@
   "provider": {
     "id": "mistral",
     "name": "Mistral AI",
-    "url": "https://mistral.ai/technology/#pricing"
+    "url": "https://mistral.ai/pricing#api-pricing"
   },
   "models": {
-    "mistral-large-latest": {
+    "mistral-large-3-25-12": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
       "temperature": true,
       "output_token_limit": null,
-      "url": "https://docs.mistral.ai/getting-started/models/models_overview/"
+      "url": "https://docs.mistral.ai/models/mistral-large-3-25-12"
     },
-    "mistral-medium-latest": {
+    "mistral-medium-3-1-25-08": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
       "temperature": true,
       "output_token_limit": null,
-      "url": "https://docs.mistral.ai/getting-started/models/models_overview/"
+      "url": "https://docs.mistral.ai/models/mistral-medium-3-1-25-08"
     },
-    "mistral-small-latest": {
+    "mistral-small-3-2-25-06": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
       "temperature": true,
       "output_token_limit": null,
-      "url": "https://docs.mistral.ai/getting-started/models/models_overview/"
-    },
-    "open-mistral-7b": {
-      "status": "unknown",
-      "quality": 0,
-      "recommended": false,
-      "temperature": true,
-      "output_token_limit": null,
-      "url": "https://docs.mistral.ai/getting-started/models/models_overview/"
+      "url": "https://docs.mistral.ai/models/mistral-small-3-2-25-06"
     }
   }
 }
