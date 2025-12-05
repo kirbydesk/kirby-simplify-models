@@ -2,7 +2,7 @@
   "provider": {
     "id": "gemini",
     "name": "Google Gemini",
-    "website": "https://ai.google.dev"
+    "url": "https://ai.google.dev/pricing"
   },
   "models": {
     "gemini-2.0-flash-exp": {
@@ -10,28 +10,32 @@
       "quality": 0,
       "recommended": false,
       "temperature": true,
-      "output_token_limit": null
+      "output_token_limit": null,
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-v2"
     },
     "gemini-1.5-pro": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
       "temperature": true,
-      "output_token_limit": null
+      "output_token_limit": null,
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-v15"
     },
     "gemini-1.5-flash": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
       "temperature": true,
-      "output_token_limit": null
+      "output_token_limit": null,
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini-v15"
     },
     "gemini-1.0-pro": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
       "temperature": true,
-      "output_token_limit": null
+      "output_token_limit": null,
+      "url": "https://ai.google.dev/gemini-api/docs/models/gemini"
     }
   }
 }

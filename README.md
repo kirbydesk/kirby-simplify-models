@@ -55,7 +55,7 @@ Each provider has its own JSON file in the repository root:
   - `gemini` - Google Gemini models (not "google")
   - `mistral` - Mistral AI models
 - `name`: Human-readable provider name
-- `website`: Provider's website URL
+- `url`: Provider pricing URL (e.g., pricing page)
 
 ### Model
 
@@ -94,6 +94,16 @@ Maximum number of output tokens the model can generate:
 - `null` - No specific limit or provider decides (OpenAI, Gemini, Mistral)
 
 **Important:** For Anthropic models, `output_token_limit` is **required**. If not set, the API call will fail.
+
+#### url (string|optional)
+Link to model-specific documentation or information page:
+- Model url - Links to specific model documentation
+- If not set, can fall back to provider url
+- Opens in new tab when clicked in the UI
+
+**Examples:**
+- https://platform.openai.com/docs/models/gpt-4o
+- https://docs.anthropic.com/en/docs/about-claude/models
 ## Adding New Providers
 
 To add a new provider:

@@ -2,7 +2,7 @@
   "provider": {
     "id": "anthropic",
     "name": "Anthropic",
-    "website": "https://anthropic.com"
+    "url": "https://www.anthropic.com/pricing"
   },
   "models": {
     "claude-3-5-haiku-20241022": {
@@ -10,7 +10,8 @@
       "quality": 0,
       "recommended": false,
       "temperature": true,
-      "output_token_limit": 8192
+      "output_token_limit": 8192,
+      "url": "https://docs.anthropic.com/en/docs/about-claude/models"
     }
   }
 }

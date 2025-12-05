@@ -2,7 +2,7 @@
   "provider": {
     "id": "openai",
     "name": "OpenAI",
-    "website": "https://openai.com"
+    "url": "https://openai.com/api/pricing/"
   },
   "models": {
     "gpt-5.1": {
@@ -52,28 +52,32 @@
       "quality": 0,
       "recommended": false,
       "temperature": true,
-      "output_token_limit": null
+      "output_token_limit": null,
+      "url": "https://platform.openai.com/docs/models/gpt-4o-and-gpt-4o-mini"
     },
     "gpt-4o-mini": {
       "status": "issues",
       "quality": 0,
       "recommended": false,
       "temperature": true,
-      "output_token_limit": null
+      "output_token_limit": null,
+      "url": "https://platform.openai.com/docs/models/gpt-4o-and-gpt-4o-mini"
     },
     "gpt-4-turbo": {
       "status": "issues",
       "quality": 0,
       "recommended": false,
       "temperature": true,
-      "output_token_limit": null
+      "output_token_limit": null,
+      "url": "https://platform.openai.com/docs/models/gpt-4-turbo-and-gpt-4"
     },
     "gpt-3.5-turbo": {
       "status": "issues",
       "quality": 0,
       "recommended": false,
       "temperature": true,
-      "output_token_limit": null
+      "output_token_limit": null,
+      "url": "https://platform.openai.com/docs/models/gpt-3-5-turbo"
     }
   }
 }
