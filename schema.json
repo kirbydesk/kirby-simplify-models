@@ -1,73 +1,67 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/kirbydesk/kirby-simplify-models/main/schema.json",
-  "title": "Kirby Simplify Model Provider Schema",
-  "description": "Schema for AI model provider data used by Kirby Simplify plugin",
   "type": "object",
   "required": ["provider", "models"],
   "properties": {
     "provider": {
       "type": "object",
-      "required": ["id", "name", "website"],
+      "required": ["id", "name", "url"],
       "properties": {
         "id": {
           "type": "string",
-          "description": "Provider identifier matching plugin provider type",
-          "enum": ["openai", "anthropic", "gemini", "mistral"],
-          "examples": ["openai", "anthropic"]
+          "description": "Unique identifier for the provider"
         },
         "name": {
           "type": "string",
-          "description": "Human-readable provider name",
-          "minLength": 1,
-          "examples": ["OpenAI", "Anthropic", "Google Gemini"]
+          "description": "Display name of the provider"
         },
-        "website": {
+        "url": {
           "type": "string",
-          "description": "Provider's website URL",
           "format": "uri",
-          "pattern": "^https?://",
-          "examples": ["https://openai.com", "https://anthropic.com"]
+          "description": "Provider's website URL"
         }
       },
       "additionalProperties": false
     },
     "models": {
       "type": "object",
-      "description": "Collection of models offered by this provider",
-      "minProperties": 1,
       "patternProperties": {
-        "^[a-zA-Z0-9._-]+$": {
+        "^.*$": {
           "type": "object",
-          "required": ["status", "quality", "recommended", "supports"],
+          "required": ["status", "quality", "recommended", "temperature"],
           "properties": {
             "status": {
               "type": "string",
-              "description": "Technical reliability status of the model",
-              "enum": ["working", "issues", "unknown"],
-              "examples": ["working", "unknown"]
+              "description": "Current status of the model (e.g., 'unknown', 'issues', 'active')"
             },
             "quality": {
               "type": "integer",
-              "description": "Translation quality rating (0=untested, 1-5=rated)",
-              "minimum": 0,
-              "maximum": 5,
-              "examples": [0, 4, 5]
+              "description": "Quality rating of the model"
             },
             "recommended": {
               "type": "boolean",
-              "description": "Whether this model is recommended for production use",
-              "examples": [true, false]
+              "description": "Whether this model is recommended"
             },
-            "supports": {
-              "type": "array",
-              "description": "Array of supported features",
-              "items": {
-                "type": "string",
-                "enum": ["temperature"]
-              },
-              "uniqueItems": true,
-              "examples": [["temperature"], []]
+            "temperature": {
+              "type": "boolean",
+              "description": "Whether the model supports temperature parameter"
+            },
+            "output_token_limit": {
+              "oneOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Maximum output token limit, or null if not applicable"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri",
+              "description": "URL to model documentation"
             }
           },
           "additionalProperties": false

@@ -10,21 +10,24 @@
       "quality": 0,
       "recommended": false,
       "temperature": false,
-      "output_token_limit": null
+      "output_token_limit": null,
+			"url": "https://platform.openai.com/docs/models/gpt-5.1"
     },
     "gpt-5-mini": {
       "status": "issues",
       "quality": 0,
       "recommended": false,
       "temperature": false,
-      "output_token_limit": null
+      "output_token_limit": null,
+			"url": "https://platform.openai.com/docs/models/gpt-5-mini"
     },
     "gpt-5-nano": {
       "status": "unknown",
       "quality": 0,
       "recommended": false,
       "temperature": false,
-      "output_token_limit": null
+      "output_token_limit": null,
+			"url": "https://platform.openai.com/docs/models/gpt-5-nano"
     }
   }
 }
