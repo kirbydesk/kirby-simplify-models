@@ -5,6 +5,14 @@
     "url": "https://www.claude.com/pricing#api"
   },
   "models": {
+		"claude-haiku-4-5-20251001": {
+      "status": "unknown",
+      "quality": 0,
+      "recommended": false,
+      "temperature": true,
+      "output_token_limit": 64000,
+      "url": "https://docs.anthropic.com/en/docs/about-claude/models"
+    },
     "claude-3-5-haiku-20241022": {
       "status": "unknown",
       "quality": 0,
